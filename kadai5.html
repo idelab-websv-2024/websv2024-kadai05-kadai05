@@ -8,7 +8,16 @@
       function addItem()
       {
 		  var bookmark = document.getElementById('bookmark');
+
 		  var row = document.createElement('li');
+      bookmark.appendChild(row);
+
+      var anchor = document.createElement('a');
+      row.appendChild(anchor);
+
+      anchor.href = document.getElementById('href').value;
+      anchor.innerHTML = document.getElementById('linkname').value;
+
 		  // 課題：
 		  // row の中に id:linkname のテキストを入れてから
 		  // bookmark に appendChild しなさい。
